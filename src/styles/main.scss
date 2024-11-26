@@ -1,0 +1,49 @@
+//aqui estou suando vars para simplificar a sintaxe.
+//Decidi não colocar as variáveis no arquivo main para evitar poluição visual.
+@use 'variables' as vars;
+@use 'mixins' as mixins;
+@use 'hero';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: vars.$corDeFundo;
+}
+
+// text size
+.text--big{
+    @include mixins.text(18px);
+}
+
+.text{
+    @include mixins.text;
+}
+
+.text--small{
+    @include mixins.title(12px);
+}
+
+//title size
+
+.title--big{
+    @include mixins.title(44px);
+}
+
+.title{
+    @include mixins.title;
+}
+
+.title--small{
+    @include mixins.title(28px);
+}
+
+// Link
+
+.link-text{
+    @include mixins.link;
+}

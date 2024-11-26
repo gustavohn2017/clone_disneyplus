@@ -1,0 +1,19 @@
+//Normalmente, a proporção do line-height é 10px maior que o font-size.
+@use 'variables' as vars;
+@mixin text( $fontsize:16px ) {
+    font-size: $fontsize;
+    line-height: $fontsize+10px;
+    color: vars.$corTextoPrincipal;
+}
+
+@mixin title( $fontsize:28px ) {
+    @include text($fontsize)
+
+}
+
+@mixin link($fontsize: 18px){
+    @include text($fontsize);
+    color: vars.$corTextoSecundario;
+    align-items: center;
+    text-decoration: underline;
+}
