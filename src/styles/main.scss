@@ -3,11 +3,29 @@
 @use 'variables' as vars;
 @use 'mixins' as mixins;
 @use 'hero';
+@use 'shows';
+@use 'plans';
+@use 'available-devices';
+@use 'faq';
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+}
+
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
 }
 
 
@@ -46,4 +64,14 @@ body{
 
 .link-text{
     @include mixins.link;
+}
+
+button{
+    @include mixins.button;
+}
+
+//images
+
+.image-text-section{
+    @include mixins.image-text-section
 }
